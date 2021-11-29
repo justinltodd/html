@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width">
-    <title>Flip Example Preset</title>
+    <title>Hospitalizations, Events, Death Counters</title>
 
     <link rel="stylesheet" href="./flip/flip.min.css">
 
 </head>
 <body>
 
-<!-- START OF FLIP EXAMPLE PRESET -->
+<!-- START OF FLIP PRESET -->
 
 <style>
 .tick {
@@ -102,9 +102,9 @@ body {
 </div>
 <!-- End of Deaths -->
 
-<!-- Hospitals -->
+<!-- Hospitalizations -->
 <h2><font face="Open Sans" size="12px" color="#00b0fa" background-color="#FFFFFF">Total Hospitalizations</font></h2>
-<div class="tick" data-value="0" data-did-init="handleTickHospitalsInit">
+<div class="tick" data-value="0" data-did-init="handleTickHospitalizationsInit">
 
     <div data-layout="horizontal left" data-repeat="true" data-transform="arrive(9, .001) -> round -> pad('   ') -> split -> delay(rtl, 100, 150)">
 
@@ -113,13 +113,13 @@ body {
     </div>
 
 </div>
-<!-- End of Hospitals -->
+<!-- End of Hospitalizations -->
 
 <script>
 
     vEvents=894143;
     vDeaths=18853;
-    vHospitals=94537;	
+    vHospitalizations=94537;	
     	
     function handleTickEventsInit(tick) {
 
@@ -145,11 +145,11 @@ body {
         // 2. second value is speed at which the increase ramps up
 
     }
-    function handleTickHospitalsInit(tick) {
+    function handleTickHospitalizationsInit(tick) {
 
         // set final value, tick will animate towards it
         setTimeout(function(){
-            tick.value = vHospitals;
+            tick.value = vHospitalizations;
         }, 100);
 
         // play with arrive() values to tune animation speed and duration
